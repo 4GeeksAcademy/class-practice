@@ -1,0 +1,19 @@
+.fa-caret-down:before {
+    content: none;
+}
+
+.modal-btn {
+    background-color: green;
+    color: white;
+    border-radius: 0.375rem;
+    border-color: transparent;
+}
+
+.nav-bar-container {
+    justify-content: space-between;
+    width: 14%;
+}
+
+.log-out {
+    color: red;
+}
