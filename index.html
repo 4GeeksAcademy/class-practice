@@ -1,42 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <nav class="navbar navbar-expand-lg bg-light">
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <div>
-            <a class="navbar-brand" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
-          </div>
-            <form class="d-flex nav-bar-container" role="search">
-                <button type="button" class="modal-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Create new post
-                </button>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fa-solid fa-gear"></i>
-                      <i class="fa-solid fa-caret-down"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-lg-end">
-                      <li><a class="dropdown-item" href="#">Profile</a></li>
-                      <li><a class="dropdown-item" href="#">Accesibility</a></li>
-                      <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><div class="dropdown-item"><a class="log-out" href="#">Log Out</a></div></li>
-                    </ul>
-                  </div>
-            </form>
+          <a class="navbar-brand" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        </div>
+        <div class="navbar-buttons">
+          <!-- Button trigger modal -->
+          <button type="button" class="post-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Create a new post
+          </button>
+          <!-- Drop Down Menu -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><button class="dropdown-item" type="button">Profile</button></li>
+              <li><button class="dropdown-item" type="button">Accesibility</button></li>
+              <li><button class="dropdown-item" type="button">Privacy and Data</button></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><button class="dropdown-item dropdown-logout" type="button">Log Out</button></li>
+            </ul>
           </div>
         </div>
       </nav>
-      <!-- Cenntered Grid & List Tabs -->
-      <ul class="nav justify-content-center nav-tabs" id="myTab" role="tablist">
+      <!-- Grid & List Tabs -->
+      <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
         </li>
@@ -85,22 +83,26 @@
         <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
       </div>
       <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                ...
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
+              ...
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
         </div>
+      </div>
+
+	  <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   </body>
 </html>
